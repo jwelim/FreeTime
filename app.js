@@ -197,7 +197,7 @@ function App() {
     }
     initClient();
     setIsGuideLoading(true);
-    fetch('/freetime/usage-guide.json').then(response => {
+    fetch('./usage-guide.json').then(response => {
       if (!response.ok) throw new Error('JSONの取得に失敗しました');
       return response.json();
     }).then(data => setUsageGuide(data)).catch(error => {
